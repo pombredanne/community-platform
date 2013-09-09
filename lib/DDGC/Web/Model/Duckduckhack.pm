@@ -29,7 +29,9 @@ sub get_docs {
 		my $url = $file->{url};
 		my $fname = basename($path);
 		next unless $fname =~ /\.md$/;
-		
+
+		# Borrowed these 3 lines from online
+		# Recreates directory structure from file paths
 		my @parts = split /\//, $path;
 		my $scan = \%tree;
 		$scan = $scan->{shift @parts} ||= {} while @parts;
