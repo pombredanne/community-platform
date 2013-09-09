@@ -42,17 +42,7 @@ sub get_docs {
 	
 	warn Dumper $contents;
 	
-	# for my $file (@files) {
-	# 	# warn $file->{'path'};
-	# }
-
-	# my %content = $result;
-
-	# my $markdown = io($_)->slurp;
-	# my $html = Text::Markdown::markdown($markdown);
-
-	# warn Dumper \%content;
-	my $result = "nice";
+	my $result = $contents->{$doc} || $contents;
 	return \$result;
 }
 
