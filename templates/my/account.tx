@@ -134,6 +134,22 @@
 					</a>
 				</div>
 			</div>
+			<div class="row">
+				<div class="twothird">
+					<label>
+						<: $l('Privacy mode') :>
+					</label>
+				</div>
+				<div class="third">
+					<a href="<: $u('My','privacy') :>" class="button ghostblue">
+						<: if $c.user.private { :>
+							<: $l('On') :>
+						<: } else { :>
+							<: $l('Off') :>
+						<: } :>
+					</a>
+				</div>
+			</div>
 			<: if $c.user.public { :>
 				<div class="row">
 					<div class="twothird">
