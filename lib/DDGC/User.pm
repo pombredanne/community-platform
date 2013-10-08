@@ -29,7 +29,7 @@ has db => (
 	handles => [qw(
 		id
 		public
-        private
+        privacy
 		created
 		updated
 		admin

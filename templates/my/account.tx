@@ -142,7 +142,7 @@
 				</div>
 				<div class="third">
 					<a href="<: $u('My','privacy') :>" class="button ghostblue">
-						<: if $c.user.private { :>
+						<: if $c.user.privacy { :>
 							<: $l('On') :>
 						<: } else { :>
 							<: $l('Off') :>

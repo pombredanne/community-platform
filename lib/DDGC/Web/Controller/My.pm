@@ -234,7 +234,7 @@ sub public :Chained('logged_in') :Args(0) {
 sub privacy :Chained('logged_in') :Args(0) {
 		my ( $self, $c ) = @_;
 
-		if ($c->user->private) {
+		if ($c->user->privacy) {
 			$c->stash->{title} = 'Disable privacy mode';
 			$c->add_bc($c->stash->{title}, '');
 		} else {
@@ -252,9 +252,9 @@ sub privacy :Chained('logged_in') :Args(0) {
 	}
 
 	if ($c->req->params->{disable_privacy}) {
-		$c->user->private(0);
+		$c->user->privacy(0);
 	} elsif ($c->req->params->{disable_privacy}) {
-		$c->user->private(1);
+		$c->user->privacy(1);
 	}
 	$c->user->update();
 

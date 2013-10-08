@@ -3,7 +3,7 @@
 		<form action="<: $u('My','privacy') :>" method="post" id="formPublic">
 			<input type="hidden" name="action_token" value="<: $action_token :>">
 			<h2>
-				<: if $c.user.private { :>
+				<: if $c.user.privacy { :>
 					<: $l('Disable privacy mode') :>
 				<: } else { :>
 					<: $l('Enable privacy mode') :>
@@ -27,7 +27,7 @@
 			</div>
 			<div class="half">
 				<div class="half">
-					<div class="input-wrap"><input type="submit" value="<: $c.user.private ? 'Disable' : 'Enable' :> privacy mode" class="button blue submit" name="<: $c.user.private ? 'disable' : 'enable' :>_privacy" /></div>
+					<div class="input-wrap"><input type="submit" value="<: $c.user.privacy ? 'Disable' : 'Enable' :> privacy mode" class="button blue submit" name="<: $c.user.privacy ? 'disable' : 'enable' :>_privacy" /></div>
 				</div>
 			</div>
 		</form>
